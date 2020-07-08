@@ -73,41 +73,42 @@
       <mat-tab label="Bitcoin"> 
         <mat-grid-list [cols]="breakpointgraph" (window:resize)="onResizegraphBox($event)" rowHeight='400px'>
           <mat-grid-tile>
-            <div>
-
-            </div>
+            <highcharts-chart [Highcharts]="Highcharts" [options]="chartOptions_btc"
+            style="width: 100%; height: 400px; display: block;"></highcharts-chart>
           </mat-grid-tile>
-
         </mat-grid-list>
       </mat-tab>
-
-      
       <mat-tab label="Ethereum">
-        <p>We will consume our .NET Core application. Basically, we will create complete CRUD client app.</p>
+        <highcharts-chart [Highcharts]="Highcharts" [options]="chartOptions_eth"
+            style="width: 100%; height: 400px; display: block;"></highcharts-chart>
       </mat-tab>
       <mat-tab label="Ripple">
-        <p>By using material components, we are going to create fully responsive navigation menu, with its side-bar as well.</p>
+        <highcharts-chart [Highcharts]="Highcharts" [options]="chartOptions_xrp"
+            style="width: 100%; height: 400px; display: block;"></highcharts-chart>
       </mat-tab>
       <mat-tab label="Bitcoin Cash">
-        <p>By using material components, we are going to create fully responsive navigation menu, with its side-bar as well.</p>
+         <highcharts-chart [Highcharts]="Highcharts" [options]="chartOptions_btcash"
+            style="width: 100%; height: 400px; display: block;"></highcharts-chart>
       </mat-tab>
       <mat-tab label="EOS">
-        <p>By using material components, we are going to create fully responsive navigation menu, with its side-bar as well.</p>
+         <highcharts-chart [Highcharts]="Highcharts" [options]="chartOptions_eos"
+            style="width: 100%; height: 400px; display: block;"></highcharts-chart>
       </mat-tab>
       <mat-tab label="Cardano">
-        <p>By using material components, we are going to create fully responsive navigation menu, with its side-bar as well.</p>
+         <highcharts-chart [Highcharts]="Highcharts" [options]="chartOptions_card"
+            style="width: 100%; height: 400px; display: block;"></highcharts-chart>
       </mat-tab>
       <mat-tab label="Litecoin">
-        <p>By using material components, we are going to create fully responsive navigation menu, with its side-bar as well.</p>
-      </mat-tab>
-      <mat-tab label="Ripple">
-        <p>By using material components, we are going to create fully responsive navigation menu, with its side-bar as well.</p>
+         <highcharts-chart [Highcharts]="Highcharts" [options]="chartOptions_ltc"
+            style="width: 100%; height: 400px; display: block;"></highcharts-chart>
       </mat-tab>
       <mat-tab label="Stellar">
-        <p>By using material components, we are going to create fully responsive navigation menu, with its side-bar as well.</p>
+         <highcharts-chart [Highcharts]="Highcharts" [options]="chartOptions_st"
+            style="width: 100%; height: 400px; display: block;"></highcharts-chart>
       </mat-tab>
       <mat-tab label="Binance Coin">
-        <p>By using material components, we are going to create fully responsive navigation menu, with its side-bar as well.</p>
+         <highcharts-chart [Highcharts]="Highcharts" [options]="chartOptions_bnc"
+            style="width: 100%; height: 400px; display: block;"></highcharts-chart>
       </mat-tab>
     </mat-tab-group>
   </div>
