@@ -31,6 +31,8 @@ export class HomeComponent implements OnInit {
   breakpointnews: number;
   breakpointgraph: number;
   news_data: any[];
+  breakpointaboutus: any;
+
   constructor(private HttpApiService: HttpApiService) { }
 
   ngOnInit(){
@@ -93,6 +95,8 @@ export class HomeComponent implements OnInit {
     this.breakpointnews = (window.innerWidth <= 500) ? 1 : (window.innerWidth > 501 && window.innerWidth < 810) ? 2 : 4;
     
     this.breakpointgraph = (window.innerWidth <= 500) ? 1 : 2;
+    
+    this.breakpointaboutus = (window.innerWidth <= 500) ? 6 : 10;
 
     this.HttpApiService.sendGetRequest().subscribe((data: any[])=>{
     console.log(data);
@@ -106,12 +110,9 @@ export class HomeComponent implements OnInit {
                 zoomType: 'x'
             },
             title: {
-                text: name
+                text: null
             },
-            subtitle: {
-                text: document.ontouchstart === undefined ?
-                    'Click and drag in the plot area to zoom in' : 'Pinch the chart to zoom in'
-            },
+            exporting: { enabled: false },
             xAxis: {
                 type: 'datetime'
             },
@@ -164,9 +165,16 @@ export class HomeComponent implements OnInit {
   onResizegraphBox(event) {
     this.breakpointgraph = (window.innerWidth <= 500) ? 1 : 2;
   }
+  
+  onResizeaboutusBox(event) {
+    this.breakpointaboutus = (window.innerWidth <= 500) ? 6 : 10;
+  }
   public executeSelectedChange = (event) => {
     console.log(event);
   } 
+
+  
+
 
 
 }
